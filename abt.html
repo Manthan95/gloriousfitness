@@ -1,0 +1,551 @@
+<!-- About Us Page Template -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Glorius Fitness</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- Other head elements -->
+    
+    <style>
+        
+        /* Add your existing styles here */
+        body {
+            background-color: #f5f5f5;
+        }
+        .team-member {
+            margin-bottom: 20px;
+        }
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 20%;
+            margin-bottom: 10px;
+            border: 2px solid #ffc107; /* Yellow border */
+        }
+        .team-member-staff img{ /* 2200*3200*/
+/*            width: 70%;
+            height: 75%;*/
+            width: 200px;
+            height: 320px;
+
+            border-radius: 100%;
+            margin-bottom: 10px;
+            border: 2px solid #ffc107;
+        }
+        .team-member h4 {
+            font-weight: bold;
+            margin-top: 0;
+            color: yellow; /* Black text */
+        }
+        .team-member p {
+            font-size: 16px;
+            color: yellow;
+        }
+        /* Black and Yellow theme */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #000000;
+            /* border: 1px solid #ddd; */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: yellow; /* Black text */
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        /* h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        } */
+        .yellow-btn {
+            background-color: #ffc107; /* Yellow button */
+            color: yellow; /* Black text */
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .yellow-btn:hover {
+            background-color: #ffa07a; /* Yellow hover */
+        }
+        .navbar-dark {
+            background-color: black !important;
+        }
+
+        /* Make the footer stick to the bottom */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-color: black;
+            color: yellow;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        footer {
+            height: auto;
+            background-color: black;
+        }
+
+        body {
+    background-color: black;
+    color: yellow;
+}
+
+.navbar {
+    background-color: #000000 !important;
+    padding: 1rem;
+    text-align: center;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: yellow !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: yellow !important;
+}
+
+.navbar-dark .navbar-brand {
+    color: yellow !important;
+}
+
+
+
+        .image-text-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            width: 100%;
+            height: auto;
+            border: none;
+            margin: 20px auto;
+            opacity: 0;
+            animation: fadeIn 1s forwards; /* Added fade-in animation */
+        }
+
+        /* Define a hover zoom effect */
+        .image {
+            width: 50%;
+            max-width: 600px;
+            height: auto;
+            margin-right: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+        }
+
+        .image:hover {
+            transform: scale(1.1); /* Zoom effect */
+            box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5); /* Add a shadow on hover */
+        }
+
+        .text {
+            flex: 1;
+            color: yellow;
+            font-size: 1.2rem;
+            padding-right: 10px;
+        }
+
+        /* Fade-in animation for the container */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+/*footers*/
+.footer {
+    padding: 40px 0;
+    background-color: black; /* Dark background for a modern look */
+    color: yellow; /* Text color */
+}
+
+.footer ul {
+    padding: 0;
+    list-style: none; /* Remove bullet points */
+    text-align: center; /* Center the links */
+    font-size: 18px; /* Font size for links */
+    line-height: 1.6; /* Line height for readability */
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+.footer li {
+    display: inline-block; /* Horizontal layout */
+    padding: 0 10px; /* Padding between links */
+}
+
+.footer ul a {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none; /* Remove underline */
+    opacity: 0.8; /* Slightly transparent */
+}
+
+.footer ul a:hover {
+    opacity: 1; /* Full opacity on hover */
+}
+
+.footer .social {
+    text-align: center; /* Center social icons */
+    padding-bottom: 25px; /* Padding below icons */
+}
+
+.footer .social > a {
+    font-size: 24px; /* Icon size */
+    width: 40px; /* Width for circular icons */
+    height: 40px; /* Height for circular icons */
+    line-height: 40px; /* Center text vertically */
+    display: inline-block; /* Inline block for spacing */
+    text-align: center; /* Center text */
+    border-radius: 50%; /* Circular shape */
+    border: 1px solid yellow; /* Border color */
+    margin: 0 8px; /* Margin between icons */
+    color: inherit; /* Inherit color */
+    opacity: 0.75; /* Slightly transparent */
+}
+
+.footer .social > a:hover {
+    opacity: 0.9; /* More opaque on hover */
+}
+
+.footer .copyright {
+    margin-top: 15px; /* Space above copyright text */
+    text-align: center; /* Center the copyright text */
+    font-size: 13px; /* Font size for copyright */
+    color: yellow; /* Light gray color */
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+.footer .footer-break {
+    height: 2px; /* Height of the line */
+    border-width: 0; /* No border */
+    color: black; /* Line color */
+    background-color: yellow; /* Background color of the line */
+}
+
+
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.splash-screen-content {
+    text-align: center;
+}
+
+.splash-logo {
+    width: 150px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="splash-screen" id="splash-screen">
+        <div class="splash-screen-content">
+            <img src="./src/logo-nav.jpg" alt="Glorious Fitness Logo" width="300" height="300">
+            <h2>Welcome to Glorious Fitness</h2>
+            <h5>Your journey to fitness begins here!</h5>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <img src="./src/logo-nav.jpg" alt="Glorius Fitness Logo" width="70" height="80" style="margin-right: 10px;">
+            <a class="navbar-brand" href="index.html">Glorious Fitness</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="abt.html">About Us</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="blogdemo.html">Blog</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+    </nav>
+    
+    <!-- Main Content Section -->
+    <main>
+        <div class="container">
+            <h1>About Us</h1>
+            <p>We're a team of passionate fitness enthusiasts dedicated to helping you achieve your goals.</p>
+            
+            <!-- Co-Founders Section -->
+            <h2>Co-Founders</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="team-member">
+                        <img src="./src/presentceo.jpg" alt="Co-Founder 1">
+                        <h4>John Doe</h4>
+                        <p>Co-Founder & CEO</p>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p> -->
+                        <p>20 years in the industry 15 years management experience gym set up experience masters in yoga power yoga functional training specialist in transformation and diet workout planner as well as <p>
+                            Skills
+                            <ul>
+                                <li>masters in yoga</li>
+                                <li>power yoga </li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="team-member">
+                        <img src="./src/ceo.jpeg" alt="Co-Founder 2">
+                        <h4>Jane Smith</h4>
+                        <p>Co-Founder & CMO</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+                    </div>
+                </div>
+            </div>
+<hr>
+<h2>Managers Desk</h2>
+<div class="row">
+    <div class="col-md-6">
+        <div class="team-member">
+            <img src="./src/ceo.jpeg" alt="Co-Founder 1">
+            <h4>John Doe</h4>
+            <p>Manager</p>
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p> -->
+            <p>20 years in the industry 15 years management experience gym set up experience masters in yoga power yoga functional training specialist in transformation and diet workout planner as well as <p>
+                Skills
+                <ul>
+                    <li>masters in yoga</li>
+                    <li>power yoga </li>
+                </ul>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="team-member">
+            <img src="./src/ceo.jpeg" alt="Co-Founder 2">
+            <h4>Jane Smith</h4>
+            <p>Co-Manager</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+        </div>
+    </div>
+</div>
+            <hr>
+            <!-- Staff Members Section -->
+            <h2>Our Team</h2>
+            <br>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="team-member-staff">
+                        <img src="./src/IMG_8901.JPG" alt="Staff 4">
+                        <h4>Aniket Jadhav</h4>
+                        <p>Personal Trainer</p>
+                        <p>IFSA Certified Fitness Coach<br>3 Years of Fitness Training experience.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="team-member-staff">
+                        <img src="./src/IMG_8899.JPG" alt="Staff 2">
+                        <h4>Sarthak Jadhav</h4>
+                        <p>Fitness Trainer</p>
+                        <p>IFSA Certified Fitness Coach<br>4 Years of Fitness Training experience.</p>
+                    </div>
+                </div>
+                    <div class="col-md-3">
+                        <div class="team-member-staff">
+                            <img src="./src/IMG_8886.JPG" alt="Staff 3">
+                            <h4>Gaurav Pandey</h4>
+                            <p>Fitness Trainer</p>
+                            <p>IFSA Certified Fitness Coach<br>3 Years of Fitness Training experience.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member-staff">
+                            <img src="./src/IMG_8899.JPG" alt="Staff 2">
+                            <h4>Sarthak Jadhav</h4>
+                            <p>Fitness Trainer</p>
+                            <p>IFSA Certified Fitness Coach<br>4 Years of Fitness Training experience.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member-staff">
+                            <img src="./src/trainermor.jpg" alt="Staff 5">
+                            <h4>Amanda Taylor</h4>
+                            <p>Fitness Coach</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member-staff">
+                            <img src="./src/trainermorr.jpg" alt="Staff 6">
+                            <h4>Christopher Hall</h4>
+                            <p>Nutritionist</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member-staff">
+                            <img src="./src/ceo.jpeg" alt="Staff 7">
+                            <h4>Sarah Lee</h4>
+                            <p>Personal Trainer</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-member-staff">
+                            <img src="./src/ceo.jpeg" alt="Staff 8">
+                            <h4>David Kim</h4>
+                            <p>Fitness Coach</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>housing staff</p>
+                    <br>
+                </div>
+            </div> 
+<!---Staff Members Section 
+<h2>Our Team</h2>
+<br>
+<div class="row">
+    <div class="col-md-4">
+        <div class="team-member-staff">
+            <img src="./src/IMG_8901.JPG" alt="Staff 1">
+            <h4>Aniket Jadhav</h4>
+            <p>Personal Trainer</p>
+            <p>IFSA Certified Fitness Coach<br>3 Years of Fitness Training experience.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="team-member-staff">
+            <img src="./src/IMG_8899.JPG" alt="Staff 2">
+            <h4>Sarthak Jadhav</h4>
+            <p>Fitness Trainer</p>
+            <p>IFSA Certified Fitness Coach<br>4 Years of Fitness Training experience.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="team-member-staff">
+            <img src="./src/IMG_8886.JPG" alt="Staff 3">
+            <h4>Gaurav Pandey</h4>
+            <p>Fitness Trainer</p>
+            <p>IFSA Certified Fitness Coach<br>3 Years of Fitness Training experience.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="team-member-staff">
+            <img src="./src/IMG_8899.JPG" alt="Staff 4">
+            <h4>Sarthak Jadhav</h4>
+            <p>Fitness Trainer</p>
+            <p>IFSA Certified Fitness Coach<br>4 Years of Fitness Training experience.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="team-member-staff">
+            <img src="./src/ceo.jpeg" alt="Staff 5">
+            <h4>Amanda Taylor</h4>
+            <p>Fitness Coach</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="team-member-staff">
+            <img src="./src/ceo.jpeg" alt="Staff 6">
+            <h4>Christopher Hall</h4>
+            <p>Nutritionist</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="team-member-staff">
+            <img src="./src/ceo.jpeg" alt="Staff 7">
+            <h4>Sarah Lee</h4>
+            <p>Personal Trainer</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="team-member-staff">
+            <img src="./src/ceo.jpeg" alt="Staff 8">
+            <h4>David Kim</h4>
+            <p>Fitness Coach</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="team-member-staff">
+            <img src="./src/ceo.jpeg" alt="Staff 9">
+            <h4>Michael Brown</h4>
+            <p>Yoga Instructor</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+</div>-->
+        </main>
+        
+        <!-- <div id="footer"></div> -->
+        
+        <script>
+            // Add the header and footer content to the page
+            // document.getElementById('header').innerHTML = headerContent;
+            // document.getElementById('footer').innerHTML = footerContent;
+            const splashScreen = document.getElementById('splash-screen');
+
+    setTimeout(() => {
+        splashScreen.style.display = 'none';
+    }, 1000);
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="scripts.js"></script>
+    </body>
+    <!-- <footer class="bg-light text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: black;">
+            <span style="color: yellow">&copy; 2024 Glorius Fitness. All rights reserved.</span>
+            <br>
+            <small style="color: yellow">Trademark: Glorius Fitness &copy; 2024. All rights reserved.</small>
+        </div>
+    </footer> -->
+    <!-- fontawesome is being used for social icons -->
+        <hr class="footer-break">
+
+<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+    <div class="social" role="navigation" aria-labelledby="social-heading">
+        <h3 id="social-heading" class="sr-only">Follow Glorious Fitness Gym on social media</h3>
+        <a href="https://g.co/kgs/2g6NU8N" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://g.co/kgs/2g6NU8N" aria-label="Twitter"><i class="fab fa-twitter"></i></a> <!-- Correct class for Twitter -->
+        <a href="https://www.instagram.com/glori.ousfitness/?hl=en" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@fitnessboxbyprashantwadeka3502" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        
+    </div>
+    <ul class="footer-links" role="navigation" aria-labelledby="footer-links-heading">
+        <h3 id="footer-links-heading" class="sr-only">Footer Links</h3>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="abt.html">Trainers</a></li>
+        <li><a href="https://maps.app.goo.gl/ytmJyYsjjHU49Hmk6">Locate Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <p class="copyright">© 2024 Glorious Fitness Gym. All Rights Reserved</p>
+</footer>
+</html>

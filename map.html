@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address and Map Section</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.address {
+    width: 40%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.map {
+    width: 55%;
+}
+
+h2 {
+    margin: 0 0 10px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .address, .map {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+</style>
+</head>
+<body>
+<!--        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509123!2d144.9537353153164!3d-37.81627997975157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f0f0f0f%3A0x0!2sYour%20Business%20Name!5e0!3m2!1sen!2sus!4v1616161616161!5m2!1sen!2sus" 
+-->    
+
+<div class="container">
+    <div class="address">
+        <h2>Your Business Address</h2>
+        <p>123 Main Street</p>
+        <p>Your City, Your State, ZIP Code</p>
+    </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.5901938187817!2d72.90295897502757!3d19.081747382123996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c747c48b8235%3A0xe4c94f93236667ba!2sGlorious%20Fitness%20By%20Prashant%20Wadekar!5e0!3m2!1sen!2sin!4v1732603170566!5m2!1sen!2sin" 
+        width="400" 
+        height="250" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+
+</body>
+</html>

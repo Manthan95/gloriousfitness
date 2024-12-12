@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glorious Fitness</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+
+        /*footer*/
+        /*footers*/
+.footer {
+    padding: 40px 0;
+    background-color: black; /* Dark background for a modern look */
+    color: yellow; /* Text color */
+}
+
+.footer ul {
+    padding: 0;
+    list-style: none; /* Remove bullet points */
+    text-align: center; /* Center the links */
+    font-size: 18px; /* Font size for links */
+    line-height: 1.6; /* Line height for readability */
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+.footer li {
+    display: inline-block; /* Horizontal layout */
+    padding: 0 10px; /* Padding between links */
+}
+
+.footer ul a {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none; /* Remove underline */
+    opacity: 0.8; /* Slightly transparent */
+}
+
+.footer ul a:hover {
+    opacity: 1; /* Full opacity on hover */
+}
+
+.footer .social {
+    text-align: center; /* Center social icons */
+    padding-bottom: 25px; /* Padding below icons */
+}
+
+.footer .social > a {
+    font-size: 24px; /* Icon size */
+    width: 40px; /* Width for circular icons */
+    height: 40px; /* Height for circular icons */
+    line-height: 40px; /* Center text vertically */
+    display: inline-block; /* Inline block for spacing */
+    text-align: center; /* Center text */
+    border-radius: 50%; /* Circular shape */
+    border: 1px solid yellow; /* Border color */
+    margin: 0 8px; /* Margin between icons */
+    color: inherit; /* Inherit color */
+    opacity: 0.75; /* Slightly transparent */
+}
+
+.footer .social > a:hover {
+    opacity: 0.9; /* More opaque on hover */
+}
+
+.footer .copyright {
+    margin-top: 15px; /* Space above copyright text */
+    text-align: center; /* Center the copyright text */
+    font-size: 13px; /* Font size for copyright */
+    color: yellow; /* Light gray color */
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+.footer .footer-break {
+    height: 2px; /* Height of the line */
+    border-width: 0; /* No border */
+    color: black; /* Line color */
+    background-color: yellow; /* Background color of the line */
+}
+    /* Common Styles */
+
+body {
+    background-color: black;
+    color: yellow;
+}
+
+.navbar {
+    background-color: #000000 !important;
+    padding: 1rem;
+    text-align: center;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: yellow !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: yellow !important;
+}
+
+.navbar-dark .navbar-brand {
+    color: yellow !important;
+}
+
+.fitness-classes{
+    display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+
+#slideshow {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content-box {
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    font-size: 18px;
+    color: yellow;
+    text-align: center;
+    background-color: transparent;
+    width: 50%;
+    height: 100%;
+}
+
+.right-box {
+    right: 0;
+}
+
+.left-box {
+    left: 0;
+}
+
+.tagline {
+    font-size: 2rem; /* Larger font size */
+    color: yellow; /* Tagline color */
+    text-align: center; /* Center align the text */
+    padding: 20px; /* Add some padding */
+    margin: 20px 0; /* Add margin to space it out */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 10px; /* Rounded corners */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.tagline:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Mobile Styles (max-width: 768px) */
+
+@media only screen and (max-width: 768px) {
+    .feature-image1{
+        width: 100%;
+        height: 70%;
+    }
+    .feature-overlay p{
+        display: none;
+    }
+    
+    .entrance-image-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .entrance-image-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .content-box {
+        position: absolute;
+        width: 60%; /* Reduced width further */
+        padding: 3px; /* Further reduced padding */
+        font-size: 7px; /* Reduced font size */
+        color: yellow;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.0); /* Increased background opacity for better contrast */
+        line-height: 1; /* Tighter line spacing */
+        word-wrap: break-word; /* Ensures long words are broken down */
+    }
+
+    .right-box {
+        right: 5px; /* Tighter positioning to the right */
+    }
+
+    .left-box {
+        left: 5px; /* Tighter positioning to the left */
+    }
+
+    #slideshow {
+        height: 40vh; /* Maintain height for the slideshow */
+    }
+}
+
+/* Laptop Styles (min-width: 769px) */
+
+@media only screen and (min-width: 769px) {
+    .entrance-image-container {
+        width: 100vw; /* Set width to 100% of viewport width */
+        height: 100vh; /* Set height to 100% of viewport height */
+        overflow: hidden; /* Hide any overflow */
+        margin: 0; /* No margin */
+    }
+
+    .entrance-image-container img {
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        object-fit: cover; /* Cover the container */
+        object-position: center; /* Center the image */
+        display: block; /* Prevent bottom space caused by inline-block */
+    }
+
+    #slideshow {
+        width: auto;
+        height: 80vh; /* Set a maximum height for desktop and laptop devices */
+    }
+}
+
+/* Style for the paragraph element */
+/* Style for the paragraph element */
+/* Style for the paragraph element */
+p {
+    font-size: 18px;
+    color: yellow;
+    text-align: center;
+    background-color: transparent;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Style for the paragraph element with a specific class */
+.why-choose-gloriusfitness {
+    font-size: 24px;
+    font-weight: bold;
+    color: yellow;
+    text-align: center;
+    background-color: transparent;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Style for the paragraph element with a specific class */
+.why-choose-gloriusfitness-content {
+    font-size: 18px;
+    color: yellow;
+    text-align: justify;
+    background-color: transparent;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Style for the feature section */
+.feature {
+    margin: 20px 0;
+}
+
+/* Style for the feature image */
+.feature-image {
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    width: 100%;
+    position: relative;
+}
+
+.feature-image1 {
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    width: 100%;
+    position: relative;
+}
+
+/* Style for the feature overlay */
+/* Style for the feature overlay */
+.feature-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: yellow;
+}
+
+/* Style for the feature title */
+.feature-overlay h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Style for the feature description */
+.feature-overlay p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+/* Additional Styles */
+
+
+.call-to-action {
+  background-color: #000000;
+  padding: 20px;
+  text-align: center;
+}
+
+.call-to-action h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.call-to-action p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.enquiry-form-button {
+  background-color: black;
+  color: yellow;
+  padding: 10px 20px;
+  border: 1px solid  yellow;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.enquiry-form-button:hover {
+  background-color: yellow;
+  color: black;
+}
+
+.enquiry-form-button a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.splash-screen-content {
+  text-align: center;
+}
+
+.splash-screen-content img {
+  margin-bottom: 20px;
+}
+
+.splash-screen-content h2 {
+  font-size: 36px;
+  color: yellow;
+  margin-bottom: 10px;
+}
+
+.splash-screen-content p {
+  font-size: 18px;
+  color: yellow;
+}
+.container1{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0px;
+    border-radius: 8px;
+}
+.address{
+    /* margin-top: 10px; */
+    margin-left: 150px;
+    width: 50%;
+    padding: 0px;
+}
+.map{
+ width: 55%;
+ margin-left: 300px;
+ overflow: hidden;
+ border-radius: 10px;
+}
+    </style>
+</head>
+<body>
+    <!-- <div id="splash-screen" class="splash-screen">
+        <div class="splash-screen-content">
+          <img src="./src/cntctlogo.jpg" alt="Glorius Fitness Logo" width="250" height="250">
+          <h2>Glorious Fitness</h2>
+          <p>Loading...</p>
+        </div>
+      </div> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <img src="./src/logo-nav.jpg" alt="Glorius Fitness Logo" width="70" height="80" style="margin-right: 10px;">
+            <a class="navbar-brand" href="index.html">Glorious Fitness</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="abt.html">About Us</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="blogdemo.html">Blog</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+    </nav>
+
+
+    <div id="slideshow">
+        <div class="slide" style="background-image: url('./src/overall.jpg');"></div>
+        <div class="slide" style="background-image: url('./src/cardio.jpg');"></div>
+        <div class="slide" style="background-image: url('./src/benchpress.jpg');"></div>
+        <!-- <div class="slide" style="background-image: url('./src/squatrack.jpg');"></div> -->
+        <!-- <div class="slide" style="background-image: url('./src/overall.jpeg');"></div> -->
+        <div class="slide" style="background-image: url('./src/matrix.jpg');"></div>
+
+
+    </div>
+
+    <div class="container">
+        <h4 class="tagline">Unleash your inner strength. Our gym is more than just a workout space - it's a sanctuary for those seeking physical and mental growth, guided by the principles of Lord Hanuman.</h4>
+
+        <div class="image-container entrance-image-container">
+            <img src="./src/entrance.jpg" alt="Image">
+            <div class="content-box right-box">
+                <!-- <p>Unleash your inner strength. Our gym is more than just a workout space - it's a sanctuary for those seeking physical and mental growth, guided by the principles of Lord Hanuman.</p> -->
+            </div>
+        </div>
+
+        <!-- <div class="image-container entrance-image-container">
+            <img src="./src/benchpress.jpg" alt="Image">
+            <div class="content-box">
+                <p>Benchpress</p>
+            </div>
+        </div> -->
+    </div>
+    
+    <!-- <div>
+        <img src="./src/overall.jpg" width="100%">
+        <img src="./src/squatrack.jpg" width="100%">
+        <img src="./src/benchpress.jpg" width="100%">    
+        <img src="./src/matrix.jpg" width="100%">
+
+    </div> -->
+    <!-- Add a class to the paragraph element -->
+<!-- Add a class to the paragraph element -->
+<!-- Add a class to the paragraph element -->
+<p class="why-choose-gloriusfitness">Why choose GloriusFitness?</p>
+
+<!-- Add a class to the paragraph element -->
+<div class="why-choose-gloriusfitness-content">
+    <p>At Glorious Fitness, we're dedicated to helping you achieve your fitness goals and live a healthier, happier life. Here are just a few reasons why you should choose us:</p>
+    
+    <div class="feature">
+        <div class="feature-image1" style="background-image: url('./src/cardio.jpg');">
+            <div class="feature-overlay">
+                <h3>Expert Trainers and Coaches</h3>
+                <p>Our team of expert trainers and coaches are dedicated to helping you achieve your fitness goals. With years of experience and a passion for fitness, they'll guide you every step of the way.</p>
+            </div>
+        </div>
+        <p style="font-size: 20px;">At Glorious Fitness, we pride ourselves on having a team of expert trainers and coaches who are dedicated to helping you achieve your fitness goals. With years of experience and a passion for fitness, our trainers and coaches are here to guide and support you every step of the way.</p>
+        <ul><b>Services:</b>
+            <li><b>Personal Training:</b> One-on-one training sessions tailored to your specific needs and goals</li>
+            <li><b>Group Fitness:</b> High-energy group classes led by our expert trainers and coaches</li>
+            <li><b>Nutrition Coaching:</b> Personalized nutrition planning and guidance to help you achieve your health and wellness goals</li>
+        </ul>
+    </div>
+    
+    <div class="feature">
+        <div class="feature-image" style="background-image: url('./src/matrix.jpg');">
+            <div class="feature-overlay">
+                <h3>State-of-the-Art Facilities</h3>
+                <p>Our gym is equipped with the latest state-of-the-art equipment and facilities, ensuring that you have everything you need to reach your fitness goals.</p>
+            </div>
+        </div>
+        <p style="font-size: 20px;"> At GloriousFitness, we're proud to feature top-of-the-line Matrix equipment in our state-of-the-art facilities. Matrix is a leading manufacturer of commercial fitness equipment, known for their innovative designs, durability, and exceptional performance.</p>
+        <ul><b>Why Matrix?</b>
+            <li><strong>Unparalleled Quality:</strong> Matrix equipment is built to last, with a focus on durability and low maintenance.</li>
+            <li><strong>Innovative Technology:</strong> Matrix incorporates cutting-edge technology into their equipment, providing a more engaging and effective workout experience.</li>
+            <li><strong>Variety of Options:</strong> Matrix offers a wide range of equipment, including cardio machines, strength training machines, and functional training tools, to cater to diverse fitness needs and goals.</li>
+          </ul>
+        <ul><b>Facility Features:</b>
+            <li><b>Cardio Area:</b> Equipped with the latest cardio machines, including treadmills, ellipticals, and stationary bikes</li>
+            <li><b>Strength Training Area:</b>  Featuring a wide range of free weights, resistance machines, and functional training equipment</li>
+            <li><b>Group Fitness Studios:</b> Spacious and well-ventilated cross fit area for yoga, Pilates, spinning, and other group fitness classes</li>
+            <li><b>Locker Rooms:</b>Clean, comfortable, and well-maintained locker rooms with showers, towels, and amenities</li>
+        </ul>
+    </div>
+    
+    <div class="feature">
+        <div class="feature-image" style="background-image: url('./src/image3.jpg');">
+            <div class="feature-overlay">
+                <h3>Personalized-Fitness Programs</h3>
+                <p>We understand that every individual is unique, which is why we offer personalized fitness programs tailored to your specific needs and goals.</p>
+            </div>
+        </div>
+        <p style="font-size: 20px;">At GloriousFitness,we understand that every individual is unique, with their own fitness goals, needs, and preferences. That's why we offer personalized fitness programs, tailored to help you achieve your specific objectives and reach your full potential.</p>
+        <b>What is a Personalized Fitness Program?</b>
+        <p>A personalized fitness program is a customized workout plan designed specifically for you, taking into account your fitness level, goals, and preferences. Our expert trainers and coaches will work with you to create a program that addresses your strengths, weaknesses, and goals, ensuring a safe and effective workout experience.</p>
+        <ul><b>Benefits of personalized fitness programs:</b>
+            <li><b>Customized Workouts:</b> Get a workout plan that's tailored to your specific needs and goals, ensuring maximum results and progress.</li>
+            <li><b>Increased Motivation:</b>Work with a dedicated trainer or coach who will motivate and support you every step of the way.</li>
+            <li><b>Improved Safety: </b> Our trainers and coaches will ensure that you're performing exercises correctly and safely, reducing the risk of injury.</li>
+            <li><b>Faster Progress:</b>With a personalized program, you'll see faster progress and results, as you'll be working on specific areas of improvement.</li>
+        </ul>
+    </div>
+    
+    <div class="feature">
+        <div class="feature-image" style="background-image: url('./src/image4.jpg');">
+            <div class="feature-overlay">
+                <h3>Supportive Community</h3>
+                <p>At Glorious Fitness, we're more than just a gym - we're a community. Our members are supportive, motivated, and dedicated to helping each other achieve their fitness goals.</p>
+            </div>
+        </div>
+        <p style="font-size: 20px;">At Glorious Fitness, we believe that fitness is not just about physical transformation, but also about mental and emotional well-being. That's why we've created a supportive community that fosters connection, motivation, and accountability among our members.</p>
+        <b>What is Our Supportive Community?</b>
+        <p>Our supportive community is a network of like-minded individuals who share a common goal of achieving their fitness goals and living a healthy lifestyle. Our community is built on the principles of encouragement, motivation, and support, providing a safe and welcoming space for members to connect, share, and grow.</p>
+    </div>
+    
+    <div class="feature">
+        <div class="feature-image1" style="background-image: url('./src/yoga.jpg');">
+            <div class="feature-overlay">
+                <h3>Variety of Fitness Classes</h3>
+                <p>We offer a wide range of fitness classes, from yoga and Pilates to strength training and cardio, ensuring that you'll never get bored and can always find a class that suits your style.</p>
+            </div>
+        </div>
+        <p style="font-size: 20px;">At Glorious Fitness, we believe that fitness should be fun, engaging, and varied. That's why we offer a wide range of fitness classes to suit all interests, fitness levels, and goals. From high-energy cardio classes to low-impact yoga sessions, our classes are designed to challenge, motivate, and inspire you.</p>
+      <div class="fitness-classes"><ul><b>Cardio Classes:</b>
+        <li>High-Intensity Interval Training (HIIT)</li>
+        <li>Spinning</li>
+        <li>Zumba</li>
+        <li>Dance-Based Workouts</li>
+      </ul>
+      <ul><b>Strength Training Classes:</b>
+        <li>Weightlifting</li>
+        <li>BodyPump</li>
+        <li>TRX Suspension Training</li>
+        <li>Kettlebell Workouts</li>
+      </ul>
+      <ul><b>Yoga and Pilates Classes:</b>
+        <li>Hatha Yoga</li>
+        <li>Vinyasa Yoga</li>
+        <li>Restorative Yoga</li>
+        <li>Pilates Mat</li>
+        <li>Reformer Pilates</li>
+      </ul>
+      <ul><b>Functional Training Classes:</b>
+        <li>Boot Camp</li>
+        <li>Agility Training</li>
+        <li>Balance and Coordination</li>
+        <li>Core Strength</li>
+      </ul>
+    </div>
+</div>
+
+<div class="call-to-action">
+    <h2>What are you waiting for?</h2>
+    <p>Fill out the enquiry form right away and we will connect with you to discuss your fitness goals and create a personalized plan tailored to your needs.</p>
+    <button class="enquiry-form-button"><a href="contact.html">Fill Out Enquiry Form</a></button>
+  </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        // Add JavaScript code to animate the slideshow
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const slideshowInterval = 3000; // 3000ms = 3s
+
+        function updateSlide() {
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.style.opacity = 1;
+                } else {
+                    slide.style.opacity = 0;
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            }
+            updateSlide();
+        }
+
+        // Initialize the slideshow
+        updateSlide();
+
+        // Set interval to automatically switch to the next slide
+        setInterval(nextSlide, slideshowInterval);
+        // Add JavaScript code to hide the splash screen after 2 seconds
+const splashScreen = document.getElementById('splash-screen');
+
+setTimeout(() => {
+  splashScreen.style.display = 'none';
+}, 2000);
+    </script>
+    <div class="container1">
+        <div class="address">
+            <p><h4>Locate us at: </h4>Pranay Sudarshan CHS A Wing, M.G Road, Joshi Ln, Pant Nagar, Ghatkopar East, Mumbai-400077
+            </p>
+        </div>
+
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.5901938187817!2d72.90295897502757!3d19.081747382123996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c747c48b8235%3A0xe4c94f93236667ba!2sGlorious%20Fitness%20By%20Prashant%20Wadekar!5e0!3m2!1sen!2sin!4v1732603170566!5m2!1sen!2sin" 
+            width="400" 
+            height="250" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</body>
+<hr>
+<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+    
+    <div class="social" role="navigation" aria-labelledby="social-heading">
+        <h3 id="social-heading" class="sr-only">Follow Glorious Fitness Gym on social media</h3>
+        <a href="https://g.co/kgs/2g6NU8N" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://g.co/kgs/2g6NU8N" aria-label="Twitter"><i class="fab fa-twitter"></i></a> <!-- Correct class for Twitter -->
+        <a href="https://www.instagram.com/glori.ousfitness/?hl=en" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@fitnessboxbyprashantwadeka3502" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        
+    </div>
+    <ul class="footer-links" role="navigation" aria-labelledby="footer-links-heading">
+        <h3 id="footer-links-heading" class="sr-only">Footer Links</h3>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="abt.html">Trainers</a></li>
+        <li><a href="https://maps.app.goo.gl/ytmJyYsjjHU49Hmk6">Locate Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <p class="copyright">© 2024 Glorious Fitness Gym. All Rights Reserved</p>
+</footer>
+
+</html>
+

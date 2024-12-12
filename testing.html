@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .location-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px; /* Add some margin around the container */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.address {
+    flex: 1; /* Allow the address section to grow */
+    margin-right: 20px; /* Space between address and map */
+    min-width: 300px; /* Minimum width for the address section */
+}
+
+.map {
+    margin-left: 10px;
+    flex: 2; /* Allow the map section to take more space */
+    overflow: hidden;
+    border-radius: 10px;
+    min-width: 300px; /* Minimum width for the map section */
+}
+
+.map iframe {
+    width: 70%; /* Full width for the iframe */
+    height: 200px; /* Set a default height for the map */
+    border: 0; /* Remove border */
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+    .location-container {
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center; /* Center align on mobile */
+    }
+
+    .address {
+        margin-right: 0; /* Remove right margin on mobile */
+        width: 100%; /* Full width for address on mobile */
+        text-align: center; /* Center text for better visibility */
+    }
+
+    .map {
+        width: 100%; /* Full width for map on mobile */
+        height: 10px; /* Adjust height for mobile */
+        margin-top: 20px; /* Add space between address and map */
+    }
+}
+</style>
+</head>
+<body>
+    <div class="location-container">
+        <div class="address">
+            <h4>Locate us at:</h4>
+            <p>Pranay Sudarshan CHS A Wing, M.G Road, Joshi Ln, Pant Nagar, Ghatkopar East, Mumbai-400077</p>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.5901938187817!2d72.90295897502757!3d19.081747382123996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c747c48b8235%3A0xe4c94f93236667ba!2sGlorious%20Fitness%20By%20Prashant%20Wadekar!5e0!3m2!1sen!2sin!4v1732603170566!5m2!1sen!2sin" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</body>
+</html>

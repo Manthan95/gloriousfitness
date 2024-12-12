@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glorius Fitness</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /*footers*/
+.footer {
+    padding: 40px 0;
+    background-color: black; /* Dark background for a modern look */
+    color: yellow; /* Text color */
+}
+
+.footer ul {
+    padding: 0;
+    list-style: none; /* Remove bullet points */
+    text-align: center; /* Center the links */
+    font-size: 18px; /* Font size for links */
+    line-height: 1.6; /* Line height for readability */
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+.footer li {
+    display: inline-block; /* Horizontal layout */
+    padding: 0 10px; /* Padding between links */
+}
+
+.footer ul a {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none; /* Remove underline */
+    opacity: 0.8; /* Slightly transparent */
+}
+
+.footer ul a:hover {
+    opacity: 1; /* Full opacity on hover */
+}
+
+.footer .social {
+    text-align: center; /* Center social icons */
+    padding-bottom: 25px; /* Padding below icons */
+}
+
+.footer .social > a {
+    font-size: 24px; /* Icon size */
+    width: 40px; /* Width for circular icons */
+    height: 40px; /* Height for circular icons */
+    line-height: 40px; /* Center text vertically */
+    display: inline-block; /* Inline block for spacing */
+    text-align: center; /* Center text */
+    border-radius: 50%; /* Circular shape */
+    border: 1px solid yellow; /* Border color */
+    margin: 0 8px; /* Margin between icons */
+    color: inherit; /* Inherit color */
+    opacity: 0.75; /* Slightly transparent */
+}
+
+.footer .social > a:hover {
+    opacity: 0.9; /* More opaque on hover */
+}
+
+.footer .copyright {
+    margin-top: 15px; /* Space above copyright text */
+    text-align: center; /* Center the text */
+    font-size: 13px; /* Font size */
+    color: yellow; /* Text color */
+    margin-bottom: 0; /* Remove bottom margin */
+    width: 100%; /* Ensure it spans the full width of the footer */
+}
+
+
+.footer .footer-break {
+    height: 2px; /* Height of the line */
+    border-width: 0; /* No border */
+    color: black; /* Line color */
+    background-color: yellow; /* Background color of the line */
+}
+        /* .navbar-dark {
+            background-color: black !important;
+        } */
+
+        /* Make the footer stick to the bottom */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-color: black;
+            color: yellow;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        /* footer {
+            height: auto;
+            background-color: black;
+        } */
+
+        /* .navbar-nav {
+            margin-left: auto;
+        }
+
+        .nav-item {
+            margin-left: 20px;
+        } */
+
+        body {
+    background-color: black;
+    color: yellow;
+}
+
+.navbar {
+    background-color: #000000 !important;
+    padding: 1rem;
+    text-align: center;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: yellow !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: yellow !important;
+}
+
+.navbar-dark .navbar-brand {
+    color: yellow !important;
+}
+
+
+        .container {
+            display: flex;
+            flex-direction: column; /* Stack video and text vertically */
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9; /* Maintain aspect ratio for the video */
+        }
+
+        p {
+            color: yellow;
+            width: 100%;
+            text-align: justify;
+            padding: 10px;
+            /* Add padding for better readability on mobile */
+            text-align: left; /* Align text to the left for better readability */
+        }
+
+        /* Mobile Styles (for screens smaller than 768px) */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack video and text vertically */
+                align-items: center;
+                justify-content: center;
+            }
+
+            iframe, p {
+                max-width: 100%; /* Make both video and text take full width */
+                width:auto;
+                height: auto; /* Adjust height automatically */
+            }
+
+            iframe {
+                aspect-ratio: auto; /* Reset aspect ratio on smaller screens */
+                /* height: auto; Allow iframe to adjust height based on content */
+            }
+
+            p {
+                /* height: auto; */
+                padding: 8px; /* Add padding for better readability on mobile */
+                text-align: left; /* Align text to the left for better readability */
+            }
+        }
+
+        @media (min-width: 768px) {
+  .container {
+    align-items: center;
+    flex-direction: row; /* Change direction to row for desktop devices */
+  }
+
+  iframe {
+    height: auto;
+    width: 50%; /* Set width to 50% for desktop devices */
+  }
+
+  p {
+    /* order: -1; */
+    padding: 20px;
+    width: 50%; /* Set width to 50% for desktop devices */
+    
+  }
+  .container:nth-child(even){
+        flex-direction: row-reverse;
+    }
+}
+
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.splash-screen-content {
+    text-align: center;
+}
+
+.splash-logo {
+    width: 150px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="splash-screen" id="splash-screen">
+        <div class="splash-screen-content">
+            <img src="./src/logo-nav.jpg" alt="Glorious Fitness Logo" width="300" height="300">
+            <h2>Welcome to Glorious Fitness</h2>
+            <h5>Your journey to fitness begins here!</h5>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <img src="./src/logo-nav.jpg" alt="Glorius Fitness Logo" width="70" height="80" style="margin-right: 10px;">
+            <a class="navbar-brand" href="index.html">Glorious Fitness</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="abt.html">About Us</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="blogdemo.html">Blog</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+    </nav>
+    <!-- Main Content Section -->
+    <main>
+        <br>
+        <div class="container">
+            <iframe src="https://www.youtube.com/embed/KcpkuZx614s?si=_NohXCqU1amKEc23" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>This workout is perfect for those who have been consistently training for 10-12 weeks and are ready to take their routine to the next level. Whether you're just stepping up from a beginner's stage or already at an intermediate level, these variations will help you achieve a well-rounded upper body. Make sure to warm up properly, maintain proper form, and challenge yourself! If you enjoy the workout, don't forget to like, subscribe, and hit the notification bell to stay updated with more fitness tips and workouts.</p>
+        </div>
+
+        <div class="container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RxyvPjLVMxM?si=Zb2pCG-pMzmqCiwa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Day 1 is a full-body workout starting with 5-10 minutes of light cardio like brisk walking, jogging, or cycling. The workout includes bodyweight squats, push-ups (or knee push-ups), bent-over dumbbell rows, planks, and standing dumbbell presses, each performed in 3 sets of 8-15 reps (or seconds for planks). Afterward, 5-10 minutes of stretching will help cool down and improve flexibility. The focus is on proper form, using light weights or bodyweight initially, and gradually increasing resistance. Adequate hydration, nutrition, and listening to your body are important to avoid injury and support recovery.</p>
+        </div>
+
+
+        <div class="container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8yXl5J4xZjM?si=-wIEodPhNvIVgpUC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        
+            <p>After whole body workout next day you can do cardio for 40 mins to 60mins and some stretching session for reducing your sourness 
+                Here I would like to suggest your each cardio variation 15 min and set your target heart rate for setting up a target heart rate pls comment n follow insta of glorious fitness n subscribe our channel</p>
+        </div>
+
+
+        <div class="container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bYNomCewuJA?si=7PEglr7DPq7_QZJH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Day 3 targets the lower body, starting with a 5-10 minute light cardio warm-up. The workout consists of lunges for leg strength, glute bridges to engage the hips and glutes, calf raises for lower leg development, and leg presses if available. Bodyweight squats are included to further work the legs and glutes, with each exercise performed in 3 sets of 10-20 repetitions. The session ends with a 5-10 minute cool down, focusing on stretching to enhance flexibility and aid recovery.</p>
+        </div>
+
+        <div class="container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_bnRpJSRzYw?si=0RIijbwdNunbB1Rt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
+            <p>Day 4 focuses on strengthening the upper body, beginning with a 5-10 minute light cardio warm-up. The workout includes push-ups or knee push-ups for chest strength, followed by dumbbell chest presses and bent-over dumbbell rows to target the chest and back. Bicep curls and tricep dips are included to tone the arms, with each exercise performed in 3 sets of 8-15 repetitions. The session concludes with a 5-10 minute cool down of stretching to promote flexibility and recovery.</p>
+        </div>
+
+       
+        <div class="container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xPwI5zekMTo?si=U9R6EFQxOAGLVgy8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Day 6 is another full-body workout that begins with a 5-10 minute light cardio warm-up. The exercises include bodyweight squats, push-ups (or knee push-ups), dumbbell deadlifts, planks, and standing dumbbell presses, all performed in 3 sets of 8-15 reps (or seconds for planks). A 5-10 minute stretching session follows to cool down. Day 7 is dedicated to active recovery, involving 30-45 minutes of light cardio such as walking or cycling, along with stretching or yoga. The plan emphasizes proper form, gradual progression in resistance, and the importance of hydration, nutrition, and listening to your body for rest.</p>
+        </div>
+    
+    
+    </main>
+
+    
+    <!-- <div id="footer"></div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="scripts.js"></script>
+    <script>
+        const splashScreen = document.getElementById('splash-screen');
+
+        setTimeout(() => {
+            splashScreen.style.display = 'none';
+        }, 1000);
+        // Add the header and footer content to the page
+        document.getElementById('header').innerHTML = headerContent;
+        document.getElementById('footer').innerHTML = footerContent;
+    </script>
+</body>
+<hr>
+<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+    <div class="social" role="navigation" aria-labelledby="social-heading">
+        <h3 id="social-heading" class="sr-only">Follow Glorious Fitness Gym on social media</h3>
+        <a href="https://g.co/kgs/2g6NU8N" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://g.co/kgs/2g6NU8N" aria-label="Twitter"><i class="fab fa-twitter"></i></a> <!-- Correct class for Twitter -->
+        <a href="https://www.instagram.com/glori.ousfitness/?hl=en" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@fitnessboxbyprashantwadeka3502" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        
+    </div>
+    <ul class="footer-links" role="navigation" aria-labelledby="footer-links-heading">
+        <h3 id="footer-links-heading" class="sr-only">Footer Links</h3>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="abt.html">Trainers</a></li>
+        <li><a href="https://maps.app.goo.gl/ytmJyYsjjHU49Hmk6">Locate Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <p class="copyright">© 2024 Glorious Fitness Gym. All Rights Reserved</p>
+</footer>
+</html>
